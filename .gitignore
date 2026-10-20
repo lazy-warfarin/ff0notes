@@ -7,9 +7,6 @@
 # Local AI assistant state and sessions
 .claudian/
 
-# Independent nested Git repository
-算法小记/
-
 # Temporary and generated files
 .trash/
 tmp_*

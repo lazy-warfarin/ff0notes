@@ -1,0 +1,18 @@
+# Obsidian device-specific state
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache/
+.obsidian/plugins/
+
+# Local AI assistant state and sessions
+.claudian/
+
+# Independent nested Git repository
+算法小记/
+
+# Temporary and generated files
+.trash/
+tmp_*
+*.tmp
+Thumbs.db
+.DS_Store

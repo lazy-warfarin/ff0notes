@@ -5,7 +5,7 @@ title: DTNLS: 3D Point Cloud Segmentation Based on 2D Image and 3D Point Cloud D
 author: Liu 等
 year: 2025
 topic: 点云分割 / 多模态融合 / LiDAR
-status: 初读（未复现）在·
+status: 初读（未复现）在·w
 
 ---
 
@@ -31,7 +31,7 @@ DTNLS 的流程：
 2. 图像纹理分割得到聚类中心与边界轮廓
 3. 以聚类中心作为扩散源沿 LiDAR 环形扩散
 4. 在边界附近搜索点云纹理边界
-5. 输出三维点云分割结果 ![[Pasted image 20261009165331.png]]
+5. 输出三维点云分割结果 ![[3D LiDAR point cloud segmentation pipeline.png]]
 
 创新点：
 - 双纹理特征融合

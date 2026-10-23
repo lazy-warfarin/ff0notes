@@ -5,7 +5,7 @@ title: DTNLS: 3D Point Cloud Segmentation Based on 2D Image and 3D Point Cloud D
 author: Liu 等
 year: 2025
 topic: 点云分割 / 多模态融合 / LiDAR
-status: 初读（未复现）在·w
+status: 初读（未复现）在·
 
 ---
 

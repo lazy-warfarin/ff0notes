@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "source_existing_file_count": 53,
+  "source_markdown_count": 45,
+  "source_png_count": 7,
+  "new_markdown_notes": 15,
+  "existing_markdown_notes_updated": 2,
+  "organized_markdown_files_checked": 17,
+  "wikilink_occurrences_checked": 104,
+  "unresolved_new_or_updated_note_links": 0,
+  "image_copies_sha256_match": 7,
+  "snapshot_crc_and_53_entry_hashes": "passed",
+  "snapshot_sha256": "c00f357c08822e556495f9e7a0fb548bbed1dceb6e47dc95c62d50129fb4abb7",
+  "redacted_source_files": 1,
+  "source_directory_exists_at_check": true,
+  "unchanged_source_file_hashes_checked": 53,
+  "credential_check": "passed; legacy credential absent from organized text and snapshot",
+  "operational_examples_executed": false,
+  "external_links_rechecked": false,
+  "obsidian_rendering_checked": false
+}

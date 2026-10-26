@@ -1,0 +1,769 @@
+{
+  "schema_version": 1,
+  "migration_date": "2026-10-25",
+  "source_directory": "D:\\projects\\notes",
+  "scope": "current-working-tree-only; no .git history; deleted entries are not restored",
+  "source_existing_file_count": 53,
+  "deleted_tracked_entries_ignored": 53,
+  "markdown_count": 45,
+  "png_count": 7,
+  "snapshot_file": "notes现存文件快照.zip",
+  "snapshot_sha256": "c00f357c08822e556495f9e7a0fb548bbed1dceb6e47dc95c62d50129fb4abb7",
+  "snapshot_crc_check": "passed",
+  "snapshot_entry_hash_check": "passed",
+  "redacted_file_count": 1,
+  "source_directory_removal": {
+    "attempted": true,
+    "completed": false,
+    "reason": "Windows trash execution rejected a target outside the workspace.",
+    "permanent_deletion_attempted": false
+  },
+  "attachment_mapping": {
+    "软硬件/AD笔记/images/image.png": "硬件开发/Altium Designer/附件/ad-03-工程结构.png",
+    "软硬件/AD笔记/images/image2.png": "硬件开发/Altium Designer/附件/ad-04-原理图库元件属性.png",
+    "软硬件/AD笔记/images/image3.png": "硬件开发/Altium Designer/附件/ad-07-原理图库规则检查.png",
+    "软硬件/AD笔记/images/image4.png": "硬件开发/Altium Designer/附件/ad-08-原理图页面设置.png",
+    "软硬件/AD笔记/images/image5.png": "硬件开发/Altium Designer/附件/ad-10-元件复制旋转镜像.png",
+    "软硬件/AD笔记/images/image6.png": "硬件开发/Altium Designer/附件/ad-24-PCB库调用.png",
+    "软硬件/AD笔记/images/image7.png": "硬件开发/Altium Designer/附件/ad-25-PCB封装检查.png"
+  },
+  "files": [
+    {
+      "source": "README.md",
+      "source_bytes": 31,
+      "source_sha256": "1a920d5714460d694ba41b1b8d3aff25f57e89b11452a4dc877e6f6de88f16a5",
+      "snapshot_entry": "notes/README.md",
+      "snapshot_bytes": 31,
+      "snapshot_sha256": "1a920d5714460d694ba41b1b8d3aff25f57e89b11452a4dc877e6f6de88f16a5",
+      "redacted": false,
+      "password_assignments_redacted": 0,
+      "organized_targets": [
+        "笔记总览.md"
+      ],
+      "disposition": "replaced-empty-index"
+    },
+    {
+      "source": "show",
+      "source_bytes": 0,
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "snapshot_entry": "notes/show",
+      "snapshot_bytes": 0,
+      "snapshot_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redacted": false,
+      "password_assignments_redacted": 0,
+      "organized_targets": [],
+      "disposition": "snapshot-only-empty-file"
+    },
+    {
+      "source": "双系统问题记录/ubuntu引导无windows.md",
+      "source_bytes": 838,
+      "source_sha256": "2a8818bed2adc9d2ffe3afbde78c2c8977d7ada5d8c4835141aa2a5b69998c57",
+      "snapshot_entry": "notes/双系统问题记录/ubuntu引导无windows.md",
+      "snapshot_bytes": 838,
+      "snapshot_sha256": "2a8818bed2adc9d2ffe3afbde78c2c8977d7ada5d8c4835141aa2a5b69998c57",
+      "redacted": false,
+      "password_assignments_redacted": 0,
+      "organized_targets": [
+        "系统与运维/Windows与Ubuntu双系统问题.md"
+      ],
+      "disposition": "merged-note"
+    },
+    {
+      "source": "双系统问题记录/win11取消登陆密码.md",
+      "source_bytes": 150,
+      "source_sha256": "726b3bc88b65b9bf31c0ab8dfacf8904982ed20415a6758505681bd0304aca4c",
+      "snapshot_entry": "notes/双系统问题记录/win11取消登陆密码.md",
+      "snapshot_bytes": 150,
+      "snapshot_sha256": "726b3bc88b65b9bf31c0ab8dfacf8904982ed20415a6758505681bd0304aca4c",
+      "redacted": false,
+      "password_assignments_redacted": 0,
+      "organized_targets": [
+        "系统与运维/Windows与Ubuntu双系统问题.md"
+      ],
+      "disposition": "merged-note"
+    },
+    {
+      "source": "双系统问题记录/禁用默认的密钥环解锁提示.md",
+      "source_bytes": 65,
+      "source_sha256": "489eaad57532b755a51cb7cf51a977a7525907b5654b6978f6f9127353dd05b1",
+      "snapshot_entry": "notes/双系统问题记录/禁用默认的密钥环解锁提示.md",
+      "snapshot_bytes": 65,
+      "snapshot_sha256": "489eaad57532b755a51cb7cf51a977a7525907b5654b6978f6f9127353dd05b1",
+      "redacted": false,
+      "password_assignments_redacted": 0,
+      "organized_targets": [
+        "系统与运维/Windows与Ubuntu双系统问题.md"
+      ],
+      "disposition": "merged-note"
+    },
+    {
+      "source": "建站记录/docker-mysql.md",
+      "source_bytes": 1352,
+      "source_sha256": "23646e68201d677f45723aaaf5db9d00ca00f6fc5bb2f53d66a06001108f48e1",
+      "snapshot_entry": "notes/建站记录/docker-mysql.md",
+      "snapshot_bytes": 1353,
+      "snapshot_sha256": "72827319478740c67ba2675941b82a6bd0026ee7889511390bc3ca20c6fca3e0",
+      "redacted": true,
+      "password_assignments_redacted": 2,
+      "organized_targets": [
+        "系统与运维/Docker部署MySQL.md"
+      ],
+      "disposition": "redacted-and-organized"
+    },
+    {
+      "source": "建站记录/frp内网穿透.md",
+      "source_bytes": 1830,
+      "source_sha256": "3cc79ae0ffbb45442d46980dec9c692563438a9be6497f6a2c6686d6bbae43af",
+      "snapshot_entry": "notes/建站记录/frp内网穿透.md",
+      "snapshot_bytes": 1830,
+      "snapshot_sha256": "3cc79ae0ffbb45442d46980dec9c692563438a9be6497f6a2c6686d6bbae43af",
+      "redacted": false,
+      "password_assignments_redacted": 0,
+      "organized_targets": [
+        "系统与运维/frp内网穿透.md"
+      ],
+      "disposition": "organized-note"
+    },
+    {
+      "source": "建站记录/https证书-let's encrypt.md",
+      "source_bytes": 99,
+      "source_sha256": "977a223ed6061cd5513630d2b50d13e9df14b42a8069e879eb3f0934aa5de5fd",
+      "snapshot_entry": "notes/建站记录/https证书-let's encrypt.md",
+      "snapshot_bytes": 99,
+      "snapshot_sha256": "977a223ed6061cd5513630d2b50d13e9df14b42a8069e879eb3f0934aa5de5fd",
+      "redacted": false,
+      "password_assignments_redacted": 0,
+      "organized_targets": [
+        "系统与运维/00-系统与运维索引.md"
+      ],
+      "disposition": "merged-reference"
+    },
+    {
+      "source": "建站记录/密钥登陆.md",
+      "source_bytes": 544,
+      "source_sha256": "703e38d6316fa0c0e602d4dd9a1305a72983267925ccb16cf7dbef8db0ae3c8e",
+      "snapshot_entry": "notes/建站记录/密钥登陆.md",
+      "snapshot_bytes": 544,
+      "snapshot_sha256": "703e38d6316fa0c0e602d4dd9a1305a72983267925ccb16cf7dbef8db0ae3c8e",
+      "redacted": false,
+      "password_assignments_redacted": 0,
+      "organized_targets": [
+        "系统与运维/00-系统与运维索引.md"
+      ],
+      "disposition": "merged-reference"
+    },
+    {
+      "source": "目标饭店/目标饭店.md",
+      "source_bytes": 105,
+      "source_sha256": "ff863e4280b33b6a40a622d4115ef5fef0fe1fdbaeea79893d0dca43f4478ff0",
+      "snapshot_entry": "notes/目标饭店/目标饭店.md",
+      "snapshot_bytes": 105,
+      "snapshot_sha256": "ff863e4280b33b6a40a622d4115ef5fef0fe1fdbaeea79893d0dca43f4478ff0",
+      "redacted": false,
+      "password_assignments_redacted": 0,
+      "organized_targets": [
+        "生活记录/想去的餐厅.md"
+      ],
+      "disposition": "organized-note"
+    },
+    {
+      "source": "算法/dp/记忆优化搜索.md",
+      "source_bytes": 1021,
+      "source_sha256": "7f4f4aaa8d033af8ab829366545bfc11d8fb668eb4d1ab19f1ed08b479e87373",
+      "snapshot_entry": "notes/算法/dp/记忆优化搜索.md",
+      "snapshot_bytes": 1021,
+      "snapshot_sha256": "7f4f4aaa8d033af8ab829366545bfc11d8fb668eb4d1ab19f1ed08b479e87373",
+      "redacted": false,
+      "password_assignments_redacted": 0,
+      "organized_targets": [
+        "算法小记/03-算法/动态规划/00-记忆化搜索.md",
+        "算法小记/00-索引/算法资料入口.md"
+      ],
+      "disposition": "concept-extracted-practice-list-snapshot-only"
+    },
+    {
+      "source": "算法/target.md",
+      "source_bytes": 296,
+      "source_sha256": "29539c434b943583b4fb5cbb817c72426fbede2902a751315928e01acadc93c9",
+      "snapshot_entry": "notes/算法/target.md",
+      "snapshot_bytes": 296,
+      "snapshot_sha256": "29539c434b943583b4fb5cbb817c72426fbede2902a751315928e01acadc93c9",
+      "redacted": false,
+      "password_assignments_redacted": 0,
+      "organized_targets": [
+        "算法小记/00-索引/算法资料入口.md"
+      ],
+      "disposition": "merged-reference"
+    },
+    {
+      "source": "算法/线段树/线段树.md",
+      "source_bytes": 19,
+      "source_sha256": "2ddcb84d7d749bd9cfd1ded0e8b37458c5c9029336852079c6e5a98f412ee295",
+      "snapshot_entry": "notes/算法/线段树/线段树.md",
+      "snapshot_bytes": 19,
+      "snapshot_sha256": "2ddcb84d7d749bd9cfd1ded0e8b37458c5c9029336852079c6e5a98f412ee295",
+      "redacted": false,
+      "password_assignments_redacted": 0,
+      "organized_targets": [
+        "算法小记/00-索引/线段树路线图.md"
+      ],
+      "disposition": "empty-note-reuses-existing-roadmap"
+    },
+    {
+      "source": "软件链接/jetbrain.md",
+      "source_bytes": 130,
+      "source_sha256": "be1c9eaf59db5f62f68812413f94e5e1c52513d701e03990277f3967e4b2c074",
+      "snapshot_entry": "notes/软件链接/jetbrain.md",
+      "snapshot_bytes": 130,
+      "snapshot_sha256": "be1c9eaf59db5f62f68812413f94e5e1c52513d701e03990277f3967e4b2c074",
+      "redacted": false,
+      "password_assignments_redacted": 0,
+      "organized_targets": [],
+      "disposition": "snapshot-only-unverified-bookmark"
+    },
+    {
+      "source": "软件链接/sai2.md",
+      "source_bytes": 40,
+      "source_sha256": "3bb1022812961d1f3a4268b98cb7ecc8a0593e4ab21541a77259564331a9d935",
+      "snapshot_entry": "notes/软件链接/sai2.md",
+      "snapshot_bytes": 40,
+      "snapshot_sha256": "3bb1022812961d1f3a4268b98cb7ecc8a0593e4ab21541a77259564331a9d935",
+      "redacted": false,
+      "password_assignments_redacted": 0,
+      "organized_targets": [],
+      "disposition": "snapshot-only-unverified-bookmark"
+    },
+    {
+      "source": "软硬件/AD笔记/03.创建空白完整的电子设计工程.md",
+      "source_bytes": 347,
+      "source_sha256": "d8812fef5f89859b1bbe06b6e6736bbcfe66900096c0e2d3550c9ae9d7793462",
+      "snapshot_entry": "notes/软硬件/AD笔记/03.创建空白完整的电子设计工程.md",
+      "snapshot_bytes": 347,
+      "snapshot_sha256": "d8812fef5f89859b1bbe06b6e6736bbcfe66900096c0e2d3550c9ae9d7793462",
+      "redacted": false,
+      "password_assignments_redacted": 0,
+      "organized_targets": [
+        "硬件开发/Altium Designer/01-工程与原理图库.md"
+      ],
+      "disposition": "merged-note"
+    },
+    {
+      "source": "软硬件/AD笔记/04.元件符号介绍及简单电阻容原理图库创建.md",
+      "source_bytes": 1002,
+      "source_sha256": "b766a0632ff188ca81730a98bcaf11c223b209620f3c69c0b75f157363ed4714",
+      "snapshot_entry": "notes/软硬件/AD笔记/04.元件符号介绍及简单电阻容原理图库创建.md",
+      "snapshot_bytes": 1002,
+      "snapshot_sha256": "b766a0632ff188ca81730a98bcaf11c223b209620f3c69c0b75f157363ed4714",
+      "redacted": false,
+      "password_assignments_redacted": 0,
+      "organized_targets": [
+        "硬件开发/Altium Designer/01-工程与原理图库.md"
+      ],
+      "disposition": "merged-note"
+    },
+    {
+      "source": "软硬件/AD笔记/05.复杂原理图库的创建.md",
+      "source_bytes": 218,
+      "source_sha256": "4e60c696b82fb3d6edafb2d9a01d552c3092034e7b649d37713485775f3d759a",
+      "snapshot_entry": "notes/软硬件/AD笔记/05.复杂原理图库的创建.md",
+      "snapshot_bytes": 218,
+      "snapshot_sha256": "4e60c696b82fb3d6edafb2d9a01d552c3092034e7b649d37713485775f3d759a",
+      "redacted": false,
+      "password_assignments_redacted": 0,
+      "organized_targets": [
+        "硬件开发/Altium Designer/01-工程与原理图库.md"
+      ],
+      "disposition": "merged-note"
+    },
+    {
+      "source": "软硬件/AD笔记/06.调用他人的原理图库.md",
+      "source_bytes": 425,
+      "source_sha256": "788cef71e0c2f00732e15014c55243b5434937cf0d9972ddb116b5432aa31b04",
+      "snapshot_entry": "notes/软硬件/AD笔记/06.调用他人的原理图库.md",
+      "snapshot_bytes": 425,
+      "snapshot_sha256": "788cef71e0c2f00732e15014c55243b5434937cf0d9972ddb116b5432aa31b04",
+      "redacted": false,
+      "password_assignments_redacted": 0,
+      "organized_targets": [
+        "硬件开发/Altium Designer/01-工程与原理图库.md"
+      ],
+      "disposition": "merged-note"
+    },
+    {
+      "source": "软硬件/AD笔记/07.检查原理图库正确性并生成报告.md",
+      "source_bytes": 162,
+      "source_sha256": "3ce155c900271a67f61c066c69bd4185122a1730be5cade1ce9982de5278362e",
+      "snapshot_entry": "notes/软硬件/AD笔记/07.检查原理图库正确性并生成报告.md",
+      "snapshot_bytes": 162,
+      "snapshot_sha256": "3ce155c900271a67f61c066c69bd4185122a1730be5cade1ce9982de5278362e",
+      "redacted": false,
+      "password_assignments_redacted": 0,
+      "organized_targets": [
+        "硬件开发/Altium Designer/01-工程与原理图库.md"
+      ],
+      "disposition": "merged-note"
+    },
+    {
+      "source": "软硬件/AD笔记/08.原理图页大小.md",
+      "source_bytes": 216,
+      "source_sha256": "a5e7805c995d68637dc4bcfdef1e1ebd8ec53351795516587f9f3e35290140b0",
+      "snapshot_entry": "notes/软硬件/AD笔记/08.原理图页大小.md",
+      "snapshot_bytes": 216,
+      "snapshot_sha256": "a5e7805c995d68637dc4bcfdef1e1ebd8ec53351795516587f9f3e35290140b0",
+      "redacted": false,
+      "password_assignments_redacted": 0,
+      "organized_targets": [
+        "硬件开发/Altium Designer/02-原理图绘制与检查.md"
+      ],
+      "disposition": "merged-note"
+    },
+    {
+      "source": "软硬件/AD笔记/09.原理图库的调用与器件的摆放.md",
+      "source_bytes": 222,
+      "source_sha256": "0cdec66b90950386871d92f997959c761c675fdea4d061e8ce212746df7224b1",
+      "snapshot_entry": "notes/软硬件/AD笔记/09.原理图库的调用与器件的摆放.md",
+      "snapshot_bytes": 222,
+      "snapshot_sha256": "0cdec66b90950386871d92f997959c761c675fdea4d061e8ce212746df7224b1",
+      "redacted": false,
+      "password_assignments_redacted": 0,
+      "organized_targets": [
+        "硬件开发/Altium Designer/02-原理图绘制与检查.md"
+      ],
+      "disposition": "merged-note"
+    },
+    {
+      "source": "软硬件/AD笔记/10.元件的镜像旋转等.md",
+      "source_bytes": 80,
+      "source_sha256": "e8df3a75f4daf6d982ed72d265b0f7543c25d47b24652aaabea51681ff5ed5aa",
+      "snapshot_entry": "notes/软硬件/AD笔记/10.元件的镜像旋转等.md",
+      "snapshot_bytes": 80,
+      "snapshot_sha256": "e8df3a75f4daf6d982ed72d265b0f7543c25d47b24652aaabea51681ff5ed5aa",
+      "redacted": false,
+      "password_assignments_redacted": 0,
+      "organized_targets": [
+        "硬件开发/Altium Designer/02-原理图绘制与检查.md"
+      ],
+      "disposition": "merged-note"
+    },
+    {
+      "source": "软硬件/AD笔记/11.元件的排列与对齐.md",
+      "source_bytes": 100,
+      "source_sha256": "8938f1b70ed9504513b3a17073ac875c097975dd6e6d1a4db6668cfb2948e192",
+      "snapshot_entry": "notes/软硬件/AD笔记/11.元件的排列与对齐.md",
+      "snapshot_bytes": 100,
+      "snapshot_sha256": "8938f1b70ed9504513b3a17073ac875c097975dd6e6d1a4db6668cfb2948e192",
+      "redacted": false,
+      "password_assignments_redacted": 0,
+      "organized_targets": [
+        "硬件开发/Altium Designer/02-原理图绘制与检查.md"
+      ],
+      "disposition": "merged-note"
+    },
+    {
+      "source": "软硬件/AD笔记/12.绘制器件导线及导线的属性设置.md",
+      "source_bytes": 417,
+      "source_sha256": "2f8117097b872e0b06505c256c0eff5e9afb373da11946c6c629fdbeb3d537c4",
+      "snapshot_entry": "notes/软硬件/AD笔记/12.绘制器件导线及导线的属性设置.md",
+      "snapshot_bytes": 417,
+      "snapshot_sha256": "2f8117097b872e0b06505c256c0eff5e9afb373da11946c6c629fdbeb3d537c4",
+      "redacted": false,
+      "password_assignments_redacted": 0,
+      "organized_targets": [
+        "硬件开发/Altium Designer/02-原理图绘制与检查.md"
+      ],
+      "disposition": "merged-note"
+    },
+    {
+      "source": "软硬件/AD笔记/13.放置器件网络标号链接.md",
+      "source_bytes": 209,
+      "source_sha256": "2e21d03ab5b5d8cc4c4235a0b4ac42c7e69b877d9f39298a920ad9ea0a19485f",
+      "snapshot_entry": "notes/软硬件/AD笔记/13.放置器件网络标号链接.md",
+      "snapshot_bytes": 209,
+      "snapshot_sha256": "2e21d03ab5b5d8cc4c4235a0b4ac42c7e69b877d9f39298a920ad9ea0a19485f",
+      "redacted": false,
+      "password_assignments_redacted": 0,
+      "organized_targets": [
+        "硬件开发/Altium Designer/02-原理图绘制与检查.md"
+      ],
+      "disposition": "merged-note"
+    },
+    {
+      "source": "软硬件/AD笔记/14.非电气对象放置（辅助线、文字等）.md",
+      "source_bytes": 222,
+      "source_sha256": "87c56a881a766827e4eff21e19ca18b4205fa41779a7c592c9794b3ce890f99b",
+      "snapshot_entry": "notes/软硬件/AD笔记/14.非电气对象放置（辅助线、文字等）.md",
+      "snapshot_bytes": 222,
+      "snapshot_sha256": "87c56a881a766827e4eff21e19ca18b4205fa41779a7c592c9794b3ce890f99b",
+      "redacted": false,
+      "password_assignments_redacted": 0,
+      "organized_targets": [
+        "硬件开发/Altium Designer/02-原理图绘制与检查.md"
+      ],
+      "disposition": "merged-note"
+    },
+    {
+      "source": "软硬件/AD笔记/15.元器件的位号编号排序及注意事项.md",
+      "source_bytes": 294,
+      "source_sha256": "d80e998444cd059269fc8a396ba6b45632df762a2a3db946a8e86eca21ce86c5",
+      "snapshot_entry": "notes/软硬件/AD笔记/15.元器件的位号编号排序及注意事项.md",
+      "snapshot_bytes": 294,
+      "snapshot_sha256": "d80e998444cd059269fc8a396ba6b45632df762a2a3db946a8e86eca21ce86c5",
+      "redacted": false,
+      "password_assignments_redacted": 0,
+      "organized_targets": [
+        "硬件开发/Altium Designer/02-原理图绘制与检查.md"
+      ],
+      "disposition": "merged-note"
+    },
+    {
+      "source": "软硬件/AD笔记/16.第16课如何快速查找原理图中的元件.md",
+      "source_bytes": 61,
+      "source_sha256": "76b743e56d8f97dc9ba4afe4c695eada90f78aee622c2845719412c881ef3553",
+      "snapshot_entry": "notes/软硬件/AD笔记/16.第16课如何快速查找原理图中的元件.md",
+      "snapshot_bytes": 61,
+      "snapshot_sha256": "76b743e56d8f97dc9ba4afe4c695eada90f78aee622c2845719412c881ef3553",
+      "redacted": false,
+      "password_assignments_redacted": 0,
+      "organized_targets": [
+        "硬件开发/Altium Designer/02-原理图绘制与检查.md"
+      ],
+      "disposition": "merged-note"
+    },
+    {
+      "source": "软硬件/AD笔记/17.原理图常见错误的编译与检查.md",
+      "source_bytes": 411,
+      "source_sha256": "e11cceadf9fdb8cf484f78be3b6948fd597fb3e7c0bab5da78f45aecb3a7798c",
+      "snapshot_entry": "notes/软硬件/AD笔记/17.原理图常见错误的编译与检查.md",
+      "snapshot_bytes": 411,
+      "snapshot_sha256": "e11cceadf9fdb8cf484f78be3b6948fd597fb3e7c0bab5da78f45aecb3a7798c",
+      "redacted": false,
+      "password_assignments_redacted": 0,
+      "organized_targets": [
+        "硬件开发/Altium Designer/02-原理图绘制与检查.md"
+      ],
+      "disposition": "merged-note"
+    },
+    {
+      "source": "软硬件/AD笔记/18.BOM物料表的导出.md",
+      "source_bytes": 92,
+      "source_sha256": "edd23b111c1db5b463b209958b6f4a1fbac4eba9812b5e0b20efcb13f2349e4d",
+      "snapshot_entry": "notes/软硬件/AD笔记/18.BOM物料表的导出.md",
+      "snapshot_bytes": 92,
+      "snapshot_sha256": "edd23b111c1db5b463b209958b6f4a1fbac4eba9812b5e0b20efcb13f2349e4d",
+      "redacted": false,
+      "password_assignments_redacted": 0,
+      "organized_targets": [
+        "硬件开发/Altium Designer/02-原理图绘制与检查.md"
+      ],
+      "disposition": "merged-note"
+    },
+    {
+      "source": "软硬件/AD笔记/19.导出PDF.md",
+      "source_bytes": 56,
+      "source_sha256": "561ded861eeb329bb774c07e78e757d808e9656ed29668fc9049a1f279a06475",
+      "snapshot_entry": "notes/软硬件/AD笔记/19.导出PDF.md",
+      "snapshot_bytes": 56,
+      "snapshot_sha256": "561ded861eeb329bb774c07e78e757d808e9656ed29668fc9049a1f279a06475",
+      "redacted": false,
+      "password_assignments_redacted": 0,
+      "organized_targets": [
+        "硬件开发/Altium Designer/02-原理图绘制与检查.md"
+      ],
+      "disposition": "merged-note"
+    },
+    {
+      "source": "软硬件/AD笔记/24.库安装与如何调用他人的PCB库.md",
+      "source_bytes": 77,
+      "source_sha256": "bea7e56f86c90aaba6260ed4b518fb82222d3d878082e1453d69e0faa46d1bf4",
+      "snapshot_entry": "notes/软硬件/AD笔记/24.库安装与如何调用他人的PCB库.md",
+      "snapshot_bytes": 77,
+      "snapshot_sha256": "bea7e56f86c90aaba6260ed4b518fb82222d3d878082e1453d69e0faa46d1bf4",
+      "redacted": false,
+      "password_assignments_redacted": 0,
+      "organized_targets": [
+        "硬件开发/Altium Designer/03-PCB封装与板框.md"
+      ],
+      "disposition": "merged-note"
+    },
+    {
+      "source": "软硬件/AD笔记/25.PCB封装的检查与报告.md",
+      "source_bytes": 119,
+      "source_sha256": "828db03fd5344296fb77bc904ffa0270a065065e585b8370eacaf93f04ecc421",
+      "snapshot_entry": "notes/软硬件/AD笔记/25.PCB封装的检查与报告.md",
+      "snapshot_bytes": 119,
+      "snapshot_sha256": "828db03fd5344296fb77bc904ffa0270a065065e585b8370eacaf93f04ecc421",
+      "redacted": false,
+      "password_assignments_redacted": 0,
+      "organized_targets": [
+        "硬件开发/Altium Designer/03-PCB封装与板框.md"
+      ],
+      "disposition": "merged-note"
+    },
+    {
+      "source": "软硬件/AD笔记/26.3DPCB封装模型调用与创建.md",
+      "source_bytes": 409,
+      "source_sha256": "bccc2e8f43f71dcaacdd8f98b82d9506f63c78909f937512a48ba050c71b3468",
+      "snapshot_entry": "notes/软硬件/AD笔记/26.3DPCB封装模型调用与创建.md",
+      "snapshot_bytes": 409,
+      "snapshot_sha256": "bccc2e8f43f71dcaacdd8f98b82d9506f63c78909f937512a48ba050c71b3468",
+      "redacted": false,
+      "password_assignments_redacted": 0,
+      "organized_targets": [
+        "硬件开发/Altium Designer/03-PCB封装与板框.md"
+      ],
+      "disposition": "merged-note"
+    },
+    {
+      "source": "软硬件/AD笔记/27.原理图如何导入PCB及导入常见报错.md",
+      "source_bytes": 249,
+      "source_sha256": "24cd7e503dd039bdfe385ab5981227d6719b7860af2509aa87b469a69794faa0",
+      "snapshot_entry": "notes/软硬件/AD笔记/27.原理图如何导入PCB及导入常见报错.md",
+      "snapshot_bytes": 249,
+      "snapshot_sha256": "24cd7e503dd039bdfe385ab5981227d6719b7860af2509aa87b469a69794faa0",
+      "redacted": false,
+      "password_assignments_redacted": 0,
+      "organized_targets": [
+        "硬件开发/Altium Designer/03-PCB封装与板框.md"
+      ],
+      "disposition": "merged-note"
+    },
+    {
+      "source": "软硬件/AD笔记/28.快速定义PCB板框与DXF导入定义.md",
+      "source_bytes": 577,
+      "source_sha256": "4c7a68d07766e1b9b18489e7e5eba900db9522fcb5f582aba393cebabc4cc7bb",
+      "snapshot_entry": "notes/软硬件/AD笔记/28.快速定义PCB板框与DXF导入定义.md",
+      "snapshot_bytes": 577,
+      "snapshot_sha256": "4c7a68d07766e1b9b18489e7e5eba900db9522fcb5f582aba393cebabc4cc7bb",
+      "redacted": false,
+      "password_assignments_redacted": 0,
+      "organized_targets": [
+        "硬件开发/Altium Designer/03-PCB封装与板框.md"
+      ],
+      "disposition": "merged-note"
+    },
+    {
+      "source": "软硬件/AD笔记/30.层叠的定义及添加.md",
+      "source_bytes": 43,
+      "source_sha256": "49309a553de193c299e83b98656335082773b831d06c314caa4a2de2df503281",
+      "snapshot_entry": "notes/软硬件/AD笔记/30.层叠的定义及添加.md",
+      "snapshot_bytes": 43,
+      "snapshot_sha256": "49309a553de193c299e83b98656335082773b831d06c314caa4a2de2df503281",
+      "redacted": false,
+      "password_assignments_redacted": 0,
+      "organized_targets": [
+        "硬件开发/Altium Designer/04-PCB布局与布线.md"
+      ],
+      "disposition": "merged-note"
+    },
+    {
+      "source": "软硬件/AD笔记/31.PCB的交互式与模块化布局操作.md",
+      "source_bytes": 356,
+      "source_sha256": "b7f36a010de1220886874e5d670c7844915cec06bbbb8182a9ec3ee1b97cd46a",
+      "snapshot_entry": "notes/软硬件/AD笔记/31.PCB的交互式与模块化布局操作.md",
+      "snapshot_bytes": 356,
+      "snapshot_sha256": "b7f36a010de1220886874e5d670c7844915cec06bbbb8182a9ec3ee1b97cd46a",
+      "redacted": false,
+      "password_assignments_redacted": 0,
+      "organized_targets": [
+        "硬件开发/Altium Designer/04-PCB布局与布线.md"
+      ],
+      "disposition": "merged-note"
+    },
+    {
+      "source": "软硬件/AD笔记/32.PCB布局的常用操作命令介绍.md",
+      "source_bytes": 362,
+      "source_sha256": "6154113373d447fa3ab69f92b78ecd5014d15ce3b43d73c7d1e11b20654cc8aa",
+      "snapshot_entry": "notes/软硬件/AD笔记/32.PCB布局的常用操作命令介绍.md",
+      "snapshot_bytes": 362,
+      "snapshot_sha256": "6154113373d447fa3ab69f92b78ecd5014d15ce3b43d73c7d1e11b20654cc8aa",
+      "redacted": false,
+      "password_assignments_redacted": 0,
+      "organized_targets": [
+        "硬件开发/Altium Designer/04-PCB布局与布线.md"
+      ],
+      "disposition": "merged-note"
+    },
+    {
+      "source": "软硬件/AD笔记/33.鼠线的打开及关闭.md",
+      "source_bytes": 130,
+      "source_sha256": "46fa839bbe269e7406155a41c80a70243d9a7c58310ea2f3ed53f9abe38dbc49",
+      "snapshot_entry": "notes/软硬件/AD笔记/33.鼠线的打开及关闭.md",
+      "snapshot_bytes": 130,
+      "snapshot_sha256": "46fa839bbe269e7406155a41c80a70243d9a7c58310ea2f3ed53f9abe38dbc49",
+      "redacted": false,
+      "password_assignments_redacted": 0,
+      "organized_targets": [
+        "硬件开发/Altium Designer/04-PCB布局与布线.md"
+      ],
+      "disposition": "merged-note"
+    },
+    {
+      "source": "软硬件/AD笔记/34.Class创建与Class的应用.md",
+      "source_bytes": 88,
+      "source_sha256": "78cf7268113c65ffee52e2c5ec27a67e49dde5fb6ef0aaea6b0515a3ed6bc183",
+      "snapshot_entry": "notes/软硬件/AD笔记/34.Class创建与Class的应用.md",
+      "snapshot_bytes": 88,
+      "snapshot_sha256": "78cf7268113c65ffee52e2c5ec27a67e49dde5fb6ef0aaea6b0515a3ed6bc183",
+      "redacted": false,
+      "password_assignments_redacted": 0,
+      "organized_targets": [
+        "硬件开发/Altium Designer/04-PCB布局与布线.md"
+      ],
+      "disposition": "merged-note"
+    },
+    {
+      "source": "软硬件/AD笔记/37.泪滴的添加与移除.md",
+      "source_bytes": 95,
+      "source_sha256": "31ac063a2941ef47bf8f1add77363c46371be58c91e22ced03e46d43bda56af6",
+      "snapshot_entry": "notes/软硬件/AD笔记/37.泪滴的添加与移除.md",
+      "snapshot_bytes": 95,
+      "snapshot_sha256": "31ac063a2941ef47bf8f1add77363c46371be58c91e22ced03e46d43bda56af6",
+      "redacted": false,
+      "password_assignments_redacted": 0,
+      "organized_targets": [
+        "硬件开发/Altium Designer/04-PCB布局与布线.md"
+      ],
+      "disposition": "merged-note"
+    },
+    {
+      "source": "软硬件/AD笔记/38.A课局部敷铜及网络的添加.md",
+      "source_bytes": 85,
+      "source_sha256": "fab1b7c131ad5aad35436a07be836a116a6b2dd2ca7c883862bfc8b55cdcc890",
+      "snapshot_entry": "notes/软硬件/AD笔记/38.A课局部敷铜及网络的添加.md",
+      "snapshot_bytes": 85,
+      "snapshot_sha256": "fab1b7c131ad5aad35436a07be836a116a6b2dd2ca7c883862bfc8b55cdcc890",
+      "redacted": false,
+      "password_assignments_redacted": 0,
+      "organized_targets": [
+        "硬件开发/Altium Designer/04-PCB布局与布线.md"
+      ],
+      "disposition": "merged-note"
+    },
+    {
+      "source": "软硬件/AD笔记/images/image.png",
+      "source_bytes": 401998,
+      "source_sha256": "4bf94d4c817ae9829900747866a8927ac0ac4624a01f86555ab40741f29c3bba",
+      "snapshot_entry": "notes/软硬件/AD笔记/images/image.png",
+      "snapshot_bytes": 401998,
+      "snapshot_sha256": "4bf94d4c817ae9829900747866a8927ac0ac4624a01f86555ab40741f29c3bba",
+      "redacted": false,
+      "password_assignments_redacted": 0,
+      "organized_targets": [
+        "硬件开发/Altium Designer/附件/"
+      ],
+      "disposition": "attachment"
+    },
+    {
+      "source": "软硬件/AD笔记/images/image2.png",
+      "source_bytes": 451523,
+      "source_sha256": "99b749628db9945d319c7a1bec9b3b3532cc14cd503b700a0323012609fb59da",
+      "snapshot_entry": "notes/软硬件/AD笔记/images/image2.png",
+      "snapshot_bytes": 451523,
+      "snapshot_sha256": "99b749628db9945d319c7a1bec9b3b3532cc14cd503b700a0323012609fb59da",
+      "redacted": false,
+      "password_assignments_redacted": 0,
+      "organized_targets": [
+        "硬件开发/Altium Designer/附件/"
+      ],
+      "disposition": "attachment"
+    },
+    {
+      "source": "软硬件/AD笔记/images/image3.png",
+      "source_bytes": 391972,
+      "source_sha256": "edb354f47b29f44274159b424de4838f0756a3e1723c052e5c5dadd464d4e133",
+      "snapshot_entry": "notes/软硬件/AD笔记/images/image3.png",
+      "snapshot_bytes": 391972,
+      "snapshot_sha256": "edb354f47b29f44274159b424de4838f0756a3e1723c052e5c5dadd464d4e133",
+      "redacted": false,
+      "password_assignments_redacted": 0,
+      "organized_targets": [
+        "硬件开发/Altium Designer/附件/"
+      ],
+      "disposition": "attachment"
+    },
+    {
+      "source": "软硬件/AD笔记/images/image4.png",
+      "source_bytes": 581206,
+      "source_sha256": "c8dd05535fbfb15a06eaff78130d4819fc30d98fc57bda530ea932419d15666b",
+      "snapshot_entry": "notes/软硬件/AD笔记/images/image4.png",
+      "snapshot_bytes": 581206,
+      "snapshot_sha256": "c8dd05535fbfb15a06eaff78130d4819fc30d98fc57bda530ea932419d15666b",
+      "redacted": false,
+      "password_assignments_redacted": 0,
+      "organized_targets": [
+        "硬件开发/Altium Designer/附件/"
+      ],
+      "disposition": "attachment"
+    },
+    {
+      "source": "软硬件/AD笔记/images/image5.png",
+      "source_bytes": 191257,
+      "source_sha256": "303f27ede5c5b23d7cee23d70f9e5f92d8c2913bb84afd024c8df485bb913052",
+      "snapshot_entry": "notes/软硬件/AD笔记/images/image5.png",
+      "snapshot_bytes": 191257,
+      "snapshot_sha256": "303f27ede5c5b23d7cee23d70f9e5f92d8c2913bb84afd024c8df485bb913052",
+      "redacted": false,
+      "password_assignments_redacted": 0,
+      "organized_targets": [
+        "硬件开发/Altium Designer/附件/"
+      ],
+      "disposition": "attachment"
+    },
+    {
+      "source": "软硬件/AD笔记/images/image6.png",
+      "source_bytes": 358571,
+      "source_sha256": "7a6f89b83aa8e0ba3511bd6827a4d9ba114e58a20a642ca20ca38f9a31a6fc5f",
+      "snapshot_entry": "notes/软硬件/AD笔记/images/image6.png",
+      "snapshot_bytes": 358571,
+      "snapshot_sha256": "7a6f89b83aa8e0ba3511bd6827a4d9ba114e58a20a642ca20ca38f9a31a6fc5f",
+      "redacted": false,
+      "password_assignments_redacted": 0,
+      "organized_targets": [
+        "硬件开发/Altium Designer/附件/"
+      ],
+      "disposition": "attachment"
+    },
+    {
+      "source": "软硬件/AD笔记/images/image7.png",
+      "source_bytes": 373451,
+      "source_sha256": "d6bf6b50802ce5ad82fafdf903714e52081cf35b642e00d41770a3c279a80685",
+      "snapshot_entry": "notes/软硬件/AD笔记/images/image7.png",
+      "snapshot_bytes": 373451,
+      "snapshot_sha256": "d6bf6b50802ce5ad82fafdf903714e52081cf35b642e00d41770a3c279a80685",
+      "redacted": false,
+      "password_assignments_redacted": 0,
+      "organized_targets": [
+        "硬件开发/Altium Designer/附件/"
+      ],
+      "disposition": "attachment"
+    },
+    {
+      "source": "软硬件/ESP32/入门.md",
+      "source_bytes": 520,
+      "source_sha256": "6f6b8c7321c2f95b0385abe208f6eeb76ce89afa38001e9f0bb9368e2ccc6b82",
+      "snapshot_entry": "notes/软硬件/ESP32/入门.md",
+      "snapshot_bytes": 520,
+      "snapshot_sha256": "6f6b8c7321c2f95b0385abe208f6eeb76ce89afa38001e9f0bb9368e2ccc6b82",
+      "redacted": false,
+      "password_assignments_redacted": 0,
+      "organized_targets": [
+        "硬件开发/ESP32/ESP32入门与ST7735显示.md"
+      ],
+      "disposition": "merged-note"
+    },
+    {
+      "source": "软硬件/ESP32/驱动st7735屏幕.md",
+      "source_bytes": 317,
+      "source_sha256": "96f7d9564269dd79f397e194b2a6356c1553defa59c70c51e410aa467356f3e4",
+      "snapshot_entry": "notes/软硬件/ESP32/驱动st7735屏幕.md",
+      "snapshot_bytes": 317,
+      "snapshot_sha256": "96f7d9564269dd79f397e194b2a6356c1553defa59c70c51e410aa467356f3e4",
+      "redacted": false,
+      "password_assignments_redacted": 0,
+      "organized_targets": [
+        "硬件开发/ESP32/ESP32入门与ST7735显示.md"
+      ],
+      "disposition": "merged-note"
+    }
+  ]
+}

@@ -32,11 +32,12 @@ level: 基础
 ## 完全背包
 
 - [[04-题库/Codeforces/189A-Cut-Ribbon|189A Cut Ribbon]]
-- [[04-题库/Codeforces/106C-Buns|106C Buns]]
+- [[04-题库/Codeforces/1934B-Yet-Another-Coin-Problem|1934B Yet Another Coin Problem]]
+- [[04-题库/Codeforces/1716D-Chip-Move|1716D Chip Move]]
 
 ## 多重背包
 
-- [[04-题库/Codeforces/1856E1-PermuTree-easy-version|1856E1 PermuTree (easy version)]]
+- [[04-题库/Codeforces/106C-Buns|106C Buns]]
 
 ## 分组与混合背包
 
@@ -50,12 +51,6 @@ level: 基础
 - [[04-题库/Codeforces/543A-Writing-Code|543A Writing Code]]
 - [[04-题库/Codeforces/687C-The-Values-You-Can-Make|687C The Values You Can Make]]
 
-## 计数与方案
-
-- [[04-题库/Codeforces/4D-Mysterious-Present|4D Mysterious Present]]
-- [[04-题库/Codeforces/8C-Looking-for-Order|8C Looking for Order]]
-- [[04-题库/Codeforces/453B-Little-Pony-and-Harmony-Chest|453B Little Pony and Harmony Chest]]
-
 ## 区间 DP
 
 - [[04-题库/Codeforces/245H-Queries-for-Number-of-Palindromes|245H Queries for Number of Palindromes]]
@@ -67,6 +62,7 @@ level: 基础
 ## 序列 DP
 
 - [[04-题库/Codeforces/467C-George-and-Job|467C George and Job]]
+- [[04-题库/Codeforces/4D-Mysterious-Present|4D Mysterious Present]]
 - [[04-题库/Codeforces/1183E-Subsequences-easy-version|1183E Subsequences (easy version)]]
 
 ## 树形 DP
@@ -85,9 +81,15 @@ level: 基础
 
 - [[04-题库/Codeforces/580D-Kefa-and-Dishes|580D Kefa and Dishes]]
 - [[04-题库/Codeforces/16E-Fish|16E Fish]]
+- [[04-题库/Codeforces/8C-Looking-for-Order|8C Looking for Order]]
 - [[04-题库/Codeforces/401D-Roman-and-Numbers|401D Roman and Numbers]]
+- [[04-题库/Codeforces/453B-Little-Pony-and-Harmony-Chest|453B Little Pony and Harmony Chest]]
 - [[04-题库/Codeforces/895C-Square-Subsets|895C Square Subsets]]
 
 ## 数位 DP
 
 - [[04-题库/Codeforces/1036C-Classy-Numbers|1036C Classy Numbers]]
+
+## DP 优化
+
+- [[04-题库/Codeforces/1856E1-PermuTree-easy-version|1856E1 PermuTree (easy version)]]

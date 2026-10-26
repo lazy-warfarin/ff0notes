@@ -7,7 +7,7 @@ rating: 2000
 tags: ["bitmasks","brute force","dp"]
 status: todo
 priority: important
-concepts: [计数与方案, 状态压缩DP]
+concepts: [状态压缩DP]
 code_path:
 first_solved:
 last_review:
@@ -29,7 +29,7 @@ failure_reason:
 
 质因子集合互斥；有限候选值配合位掩码和方案还原。
 
-关联笔记：[[03-算法/动态规划/02-背包DP/05-计数与方案|计数与方案]]、[[03-算法/动态规划/06-状态压缩DP|状态压缩DP]]。
+关联笔记：[[03-算法/动态规划/06-状态压缩DP|状态压缩DP]]。
 
 ## 状态与转移
 

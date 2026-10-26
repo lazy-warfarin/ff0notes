@@ -7,7 +7,7 @@ rating: 1700
 tags: ["dp","sortings"]
 status: todo
 priority: core
-concepts: [计数与方案, 序列DP]
+concepts: [序列DP]
 code_path:
 first_solved:
 last_review:
@@ -29,7 +29,7 @@ failure_reason:
 
 二维偏序转为最长链 DP，并保存前驱。
 
-关联笔记：[[03-算法/动态规划/02-背包DP/05-计数与方案|计数与方案]]、[[03-算法/动态规划/04-序列DP|序列DP]]。
+关联笔记：[[03-算法/动态规划/04-序列DP|序列DP]]。
 
 ## 状态与转移
 

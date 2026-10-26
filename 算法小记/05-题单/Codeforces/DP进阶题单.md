@@ -10,21 +10,19 @@ level: 进阶
 完成对应模型的基础训练后，再练高维状态、复杂依赖与优化；收录当前 rating 高于 2000 的主线题。
 完整分类与每点配额见 [[05-题单/Codeforces/DP分知识点题单|DP 分知识点题单]]；本页每题只出现一次。
 
-## 01 背包
+## 完全背包
 
-- [[04-题库/Codeforces/837D-Round-Subset|837D Round Subset]]
+- [[04-题库/Codeforces/283C-Coin-Troubles|283C Coin Troubles]]
 
 ## 多重背包
 
 - [[04-题库/Codeforces/1132E-Knapsack|1132E Knapsack]]
-- [[04-题库/Codeforces/95E-Lucky-Country|95E Lucky Country]]
-
-## 分组与混合背包
-
 - [[04-题库/Codeforces/922E-Birds|922E Birds]]
+- [[04-题库/Codeforces/95E-Lucky-Country|95E Lucky Country]]
 
 ## 多维与依赖背包
 
+- [[04-题库/Codeforces/837D-Round-Subset|837D Round Subset]]
 - [[04-题库/Codeforces/815C-Karen-and-Supermarket|815C Karen and Supermarket]]
 
 ## 区间 DP

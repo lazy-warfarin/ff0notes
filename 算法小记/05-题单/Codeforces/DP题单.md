@@ -26,19 +26,18 @@ topic: 动态规划
 - [[04-题库/Codeforces/577B-Modulo-Sum|577B Modulo Sum]]
 - [[04-题库/Codeforces/478D-Red-Green-Towers|478D Red-Green Towers]]
 - [[04-题库/Codeforces/864E-Fire|864E Fire]]
-- [[04-题库/Codeforces/837D-Round-Subset|837D Round Subset]]
 
 ## 完全背包
 
 - [[04-题库/Codeforces/189A-Cut-Ribbon|189A Cut Ribbon]]
-- [[04-题库/Codeforces/431C-k-Tree|431C k-Tree]]
-- [[04-题库/Codeforces/106C-Buns|106C Buns]]
-- [[04-题库/Codeforces/474D-Flowers|474D Flowers]]
+- [[04-题库/Codeforces/1934B-Yet-Another-Coin-Problem|1934B Yet Another Coin Problem]]
+- [[04-题库/Codeforces/1716D-Chip-Move|1716D Chip Move]]
+- [[04-题库/Codeforces/283C-Coin-Troubles|283C Coin Troubles]]
 
 ## 多重背包
 
 - [[04-题库/Codeforces/106C-Buns|106C Buns]]
-- [[04-题库/Codeforces/1856E1-PermuTree-easy-version|1856E1 PermuTree (easy version)]]
+- [[04-题库/Codeforces/922E-Birds|922E Birds]]
 - [[04-题库/Codeforces/1132E-Knapsack|1132E Knapsack]]
 - [[04-题库/Codeforces/95E-Lucky-Country|95E Lucky Country]]
 
@@ -49,7 +48,6 @@ topic: 动态规划
 - [[04-题库/Codeforces/148E-Porcelain|148E Porcelain]]
 - [[04-题库/Codeforces/2000F-Color-Rows-and-Columns|2000F Color Rows and Columns]]
 - [[04-题库/Codeforces/999F-Cards-and-Joy|999F Cards and Joy]]
-- [[04-题库/Codeforces/922E-Birds|922E Birds]]
 
 ## 多维与依赖背包
 
@@ -64,10 +62,7 @@ topic: 动态规划
 - [[04-题库/Codeforces/474D-Flowers|474D Flowers]]
 - [[04-题库/Codeforces/543A-Writing-Code|543A Writing Code]]
 - [[04-题库/Codeforces/478D-Red-Green-Towers|478D Red-Green Towers]]
-- [[04-题库/Codeforces/4D-Mysterious-Present|4D Mysterious Present]]
 - [[04-题库/Codeforces/864E-Fire|864E Fire]]
-- [[04-题库/Codeforces/8C-Looking-for-Order|8C Looking for Order]]
-- [[04-题库/Codeforces/453B-Little-Pony-and-Harmony-Chest|453B Little Pony and Harmony Chest]]
 
 ## 区间 DP
 

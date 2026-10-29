@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>从 2-3-4 树看懂红黑树</title>
+<style>
+:root{--paper:#f7f5f0;--card:#fff;--ink:#24312d;--muted:#73796f;--line:#e5e0d6;--accent:#b06367;--red:#b45353;--soft:#f0e4e3}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.6 "Outfit","Microsoft YaHei UI","Microsoft YaHei",sans-serif}main{max-width:1040px;margin:auto;padding:34px 26px 46px}h1,h2{font-family:"DM Serif Display","Noto Serif CJK SC","SimSun",serif;font-weight:600;letter-spacing:-.02em}h1{font-size:32px;line-height:1.3;margin:8px 0 12px}h2{font-size:24px;margin:0 0 14px}p{margin:8px 0}.eyebrow{font:12px "JetBrains Mono","Consolas",monospace;letter-spacing:.12em;color:var(--accent)}.lead{max-width:760px;font-size:16px}.muted{color:var(--muted)}section{margin-top:38px}a{color:#8b4c50;text-decoration-thickness:1px;text-underline-offset:3px}button{font:inherit;cursor:pointer;color:var(--ink);border:1px solid var(--line);background:var(--card);border-radius:999px;padding:8px 15px;transition:background .15s,transform .15s,border-color .15s}button:hover{background:#f4e9e7;border-color:#cfaeae;transform:translateY(-1px)}button:focus-visible,a:focus-visible{outline:3px solid #b0636770;outline-offset:3px}button[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}.controls{display:flex;gap:8px;flex-wrap:wrap;margin:15px 0}.compare{display:grid;grid-template-columns:1fr 1fr;gap:16px}.panel{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:0 3px 12px #24312d06;min-width:0}.panel h3{margin:0;font-size:15px;font-weight:600}.tag{font-size:12px;letter-spacing:.04em;color:var(--muted)}svg{display:block;width:100%;height:auto}svg text{font-family:"Outfit","Microsoft YaHei",sans-serif}.legend{display:flex;gap:18px;font-size:13px;margin-top:10px;flex-wrap:wrap}.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px}.caption{font-size:14px;min-height:45px;margin-top:10px}.keyline{border-top:1px solid var(--line);margin-top:16px;padding-top:12px}.explain{display:grid;grid-template-columns:1.1fr 1fr;gap:16px}.points{list-style:none;padding:0;margin:0}.points li{padding:10px 0;border-bottom:1px solid var(--line)}.points li:last-child{border:0}.points strong{display:block}.strip{padding:12px 16px;background:#eee9e1;border-radius:12px;font-size:14px}.formula{font:14px "JetBrains Mono","Consolas",monospace}.case{display:grid;grid-template-columns:120px 1fr;gap:12px;padding:13px 0;border-bottom:1px solid var(--line)}.case:last-child{border:0}.case strong{color:var(--accent)}.steps{display:flex;gap:6px;flex-wrap:wrap}.steps button{border-radius:10px;padding:6px 12px;min-width:42px}.trace{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(220px,.8fr);gap:18px;align-items:center}.trace-copy{padding:10px 4px}.trace-copy h3{font-size:19px;margin:5px 0 9px}.badge{font-size:12px;color:var(--accent);letter-spacing:.08em}.notice{background:var(--soft);padding:14px 18px;border-radius:14px;font-size:14px}footer{margin-top:36px;padding-top:18px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}@media(max-width:720px){main{padding:24px 16px 32px}h1{font-size:27px}.compare,.explain,.trace{grid-template-columns:1fr}.panel{padding:15px}section{margin-top:30px}.case{grid-template-columns:100px 1fr;gap:9px}.trace-copy{padding:0 5px 8px}.lead{font-size:15px}}
+</style>
+</head>
+<body>
+<main>
+<header>
+<div class="eyebrow">RED–BLACK / 2–3–4</div>
+<h1>红边合并，黑高数层</h1>
+<p class="lead">把黑结点与它的直接红孩子合并，就是一个 2-3-4 大结点。红孩子在二叉指针上低一层，在逻辑上仍属于同一个大结点。</p>
+<p class="muted">配套 Obsidian 红黑树笔记的交互对照图 · 普通红黑树，不限定所有红边左倾</p>
+</header>
+<section aria-labelledby="map-title">
+<h2 id="map-title">01 / 一个大结点，怎样拆成二叉树？</h2>
+<div class="controls" id="mapping-controls" aria-label="选择大结点编码">
+<button type="button" data-kind="two" aria-pressed="false">2-结点 · 一个键</button>
+<button type="button" data-kind="left" aria-pressed="false">3-结点 · 左红</button>
+<button type="button" data-kind="right" aria-pressed="false">3-结点 · 右红</button>
+<button type="button" data-kind="four" aria-pressed="true">4-结点 · 两红</button>
+</div>
+<div class="compare">
+<div class="panel"><div class="tag">MULTIWAY NODE</div><h3 id="multi-title">4-结点：3 个键，4 个外部分支</h3><div id="multi-svg"></div><p class="muted">T₀、T₁……表示原来的孩子子树；若为空，则是外部空分支。</p></div>
+<div class="panel"><div class="tag">BINARY ENCODING</div><h3>大小顺序没变，颜色记录组内关系</h3><div id="rb-svg"></div><div class="legend"><span><i class="dot" style="background:#24312d"></i>B：大结点代表</span><span><i class="dot" style="background:#b45353"></i>R：同组附属键</span></div></div>
+</div>
+<p class="caption" id="mapping-caption" aria-live="polite"></p>
+<div class="strip">2 / 3 / 4 说的是分支数，分别存 1 / 2 / 3 个键。普通红黑树的 3-结点可以左红，也可以右红；对应关系不是唯一形状。</div>
+</section>
+<section aria-labelledby="invariant-title">
+<h2 id="invariant-title">02 / 为什么只数黑色？</h2>
+<div class="explain">
+<div class="panel"><ul class="points"><li><strong>黑高相等 → 大结点层数相同</strong>收缩红边后，每经过一个黑色代表，就进入一个逻辑大结点；2-3-4 树所有叶大结点同层。</li><li><strong>不能连续红 → 合法的组内形状</strong>红成员直接附属于黑色代表。双红表示编码需要修复，但不一定表示已经装不下。</li><li><strong>根黑与 NIL 黑 → 代表与空分支约定</strong>根是最上层的独立代表；NIL 没有真实键，作为统一的黑色路径终点。</li></ul></div>
+<div class="panel"><svg viewBox="0 0 410 224" role="img" aria-label="同样三层大结点可以展开成三层或六层二叉结点"><text x="22" y="24" fill="#73796f" font-size="13">两条路径：相同的 3 个黑色代表</text><path d="M70 59V177 M235 51V189" stroke="#d9d2c6" stroke-width="3"/><g fill="#24312d"><circle cx="70" cy="60" r="16"/><circle cx="70" cy="120" r="16"/><circle cx="70" cy="180" r="16"/><circle cx="235" cy="50" r="14"/><circle cx="235" cy="106" r="14"/><circle cx="235" cy="162" r="14"/></g><g fill="#b45353"><circle cx="235" cy="78" r="11"/><circle cx="235" cy="134" r="11"/><circle cx="235" cy="190" r="11"/></g><text x="104" y="123" font-size="14" fill="#24312d">全黑</text><text x="266" y="123" font-size="14" fill="#24312d">黑红相间</text><text x="22" y="222" font-size="12" fill="#73796f">只画真实键路径；NIL 统一计入时不影响相等关系。</text></svg><p class="keyline">二叉路径可长可短，但每个逻辑层最多额外经过一个红结点，所以不会退化成任意长的链。</p></div>
+</div>
+</section>
+<section aria-labelledby="insert-title">
+<h2 id="insert-title">03 / 插入：满了就分，没满就理</h2>
+<div class="panel">
+<div class="case"><strong>父黑</strong><div>没有双红，直接结束。既可能是 2 → 3，也可能是在另一侧空位插入后 3 → 4。</div></div>
+<div class="case"><strong>父红 · 叔红</strong><div>祖父、父、叔已组成满的 4-结点：父叔变黑，祖父变红向上推。对应分裂，冲突可能继续向上传递。</div></div>
+<div class="case"><strong>父红 · 叔黑</strong><div>三个键仍能放进一个 4-结点，只是编码歪了：把中间键转到上面染黑，两边染红。直线单旋，折线双旋。</div></div>
+</div>
+<p class="notice"><strong>不是所有双红都要分裂。</strong>50B → 15R → 10R 只有三个键；对 50 右旋并换色后，得到 15B 带 10R、50R，恰好是一个合法 4-结点。</p>
+</section>
+<section aria-labelledby="trace-title">
+<h2 id="trace-title">04 / 跟着视频的八个数走一遍</h2>
+<p class="muted">序列 50、15、10、55、35、40、25、30。图为按笔记的自底向上普通红黑树规则独立复算，不是视频截图。</p>
+<div class="steps" id="trace-controls" aria-label="选择插入步骤"></div>
+<div class="panel trace"><div id="trace-svg"></div><div class="trace-copy" aria-live="polite"><div class="badge" id="trace-step"></div><h3 id="trace-heading"></h3><p id="trace-explanation"></p><p class="keyline muted" id="trace-multi"></p></div></div>
+</section>
+<section aria-labelledby="delete-title">
+<h2 id="delete-title">05 / 删除：借与并，修的是逻辑层数</h2>
+<div class="panel">
+<div class="case"><strong>黑兄弟有红孩子</strong><div>相邻大结点有富余：键经过共同父层交换，旋转与换色完成“借”。近侄先转方向，远侄完成借用。</div></div>
+<div class="case"><strong>黑兄弟无红孩子</strong><div>相邻大结点也只有一个键：从父层取分隔键合并。缺黑可能向上传递；遇红父可吸收，抵达根则结束。</div></div>
+<div class="case"><strong>兄弟为红</strong><div>它和父仍在同一个大结点内，不是真正独立的相邻大结点。先旋转换表示，露出黑兄弟，再讨论借或并。</div></div>
+</div>
+<p class="muted">“双黑”是缺一层黑色的记账方式，不要求代码新增第三种颜色。细节仍需维护实际摘除位置、原颜色及 NIL 的父与左右侧。</p>
+</section>
+<footer>
+<p>视频来源：<a href="https://www.bilibili.com/video/BV18exK6vE2N/" target="_blank" rel="noopener noreferrer">小盒子童鞋 · 各得其所 08：红黑树不靠背</a>。视频要点经全片视频理解整理；章节以 B 站公开信息为据。此页图解与插入状态为整理者重绘。</p>
+<p>概念交叉核对：<a href="https://cs.dartmouth.edu/~cs10/notes10.html#rb" target="_blank" rel="noopener noreferrer">Dartmouth CS 10：2-3-4 and Red/Black Trees</a>。不复述未独立复现的性能实验数字，不混用 LLRB 算法。2026-10-29。</p>
+<p>本页所有图形与逻辑均内嵌，无外部脚本或图片依赖；可直接在本地浏览器打开。</p>
+</footer>
+</main>
+<script>
+'use strict';
+const B='#24312d',R='#b45353',M='#73796f';
+const cfg={two:{keys:[20],count:2,root:{k:20,r:false,l:null,rt:null},title:'2-结点：1 个键，2 个外部分支',caption:'一个黑色代表就是一个 2-结点；它的左右分支分别进入更小和更大的键区间。'},left:{keys:[10,20],count:3,title:'3-结点：2 个键，3 个外部分支',caption:'20 为黑色代表，10 为红色左孩子。把红边收缩后，两个键仍属于同一个大结点。'},right:{keys:[10,20],count:3,title:'同一个 3-结点，也可以右红',caption:'10 为黑色代表，20 为红色右孩子。这与左红形式表示同一个双键大结点；普通红黑树两种都允许。'},four:{keys:[10,20,30],count:4,title:'4-结点：3 个键，4 个外部分支',caption:'中间键 20 染黑，两边 10、30 染红。T₀…T₃ 按大小区间分别挂到两个红孩子下，原来的搜索顺序完全保留。'}};
+function svgWrap(body,label,height=280){return '<svg viewBox="0 0 460 '+height+'" role="img" aria-label="'+label+'">'+body+'</svg>';}
+function line(x1,y1,x2,y2,red=false){return '<line x1="'+x1+'" y1="'+y1+'" x2="'+x2+'" y2="'+y2+'" stroke="'+(red?R:'#ccc7bc')+'" stroke-width="'+(red?3:1.8)+'"/>';}
+function circle(x,y,key,red){return '<circle cx="'+x+'" cy="'+y+'" r="23" fill="'+(red?R:B)+'"/><text x="'+x+'" y="'+(y+5)+'" text-anchor="middle" fill="white" font-size="17" font-weight="600">'+key+'</text><text x="'+(x+29)+'" y="'+(y+4)+'" fill="'+(red?R:B)+'" font-size="11">'+(red?'R':'B')+'</text>';}
+function subtree(x,y,i,label){return '<rect x="'+(x-28)+'" y="'+(y-17)+'" width="56" height="34" rx="10" fill="#f6f3ec" stroke="#c9c2b5" stroke-dasharray="3 3"/><text x="'+x+'" y="'+(y+5)+'" text-anchor="middle" font-size="15" fill="'+B+'">T'+['₀','₁','₂','₃'][i]+'</text><text x="'+x+'" y="'+(y+41)+'" text-anchor="middle" font-size="11" fill="'+M+'">'+label+'</text>';}
+function ranges(keys){return keys.length===1?['小于 20','大于 20']:keys.length===2?['小于 10','10 到 20 之间','大于 20']:['小于 10','10 到 20 之间','20 到 30 之间','大于 30'];}
+function renderMap(kind){const c=cfg[kind],positions=c.count===2?[120,340]:c.count===3?[75,230,385]:[52,170,290,408],labs=ranges(c.keys);let multi='',tree='';const w=c.keys.length*68;positions.forEach((x,i)=>multi+=line(230,91,x,207));c.keys.forEach((key,i)=>{const x=230-w/2+i*68;multi+='<rect x="'+x+'" y="47" width="68" height="46" fill="#f0e4e3" stroke="#bba3a0"/><text x="'+(x+34)+'" y="77" text-anchor="middle" font-size="20" fill="'+B+'">'+key+'</text>';});positions.forEach((x,i)=>multi+=subtree(x,222,i,labs[i]));
+if(kind==='four'){tree+=line(230,48,124,123,true)+line(230,48,336,123,true);[[124,52],[124,170],[336,290],[336,408]].forEach(p=>tree+=line(p[0],123,p[1],222));tree+=circle(230,48,20,false)+circle(124,123,10,true)+circle(336,123,30,true);}
+else if(kind==='left'){tree+=line(270,48,140,128,true)+line(270,48,385,222)+line(140,128,75,222)+line(140,128,230,222);tree+=circle(270,48,20,false)+circle(140,128,10,true);}
+else if(kind==='right'){tree+=line(190,48,310,128,true)+line(190,48,75,222)+line(310,128,230,222)+line(310,128,385,222);tree+=circle(190,48,10,false)+circle(310,128,20,true);}
+else{tree+=line(230,75,120,222)+line(230,75,340,222)+circle(230,75,20,false);}
+positions.forEach((x,i)=>tree+=subtree(x,222,i,labs[i]));document.getElementById('multi-svg').innerHTML=svgWrap(multi,c.title);document.getElementById('rb-svg').innerHTML=svgWrap(tree,c.title+' 的红黑编码');document.getElementById('multi-title').textContent=c.title;document.getElementById('mapping-caption').textContent=c.caption;document.querySelectorAll('#mapping-controls button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.kind===kind)));}
+function n(k,r=false,l=null,rt=null){return {k,r,l,rt};}
+const states=[
+{key:50,t:n(50),head:'黑色根代表第一个大结点',text:'初次插入后根染黑，建立唯一的逻辑层。',multi:'收缩：根 [50]。'},
+{key:15,t:n(50,false,n(15,true)),head:'父黑：直接加入',text:'15 是 50 的红色左孩子，与 50 属于同一个大结点，不增加黑高。',multi:'收缩：根 [15, 50]。'},
+{key:10,t:n(15,false,n(10,true),n(50,true)),head:'叔空：右旋祖父 50',text:'50B—15R—10R 是 LL 双红。三个键放得下：旋转并染色，让中间值 15 当黑色代表。',multi:'收缩：根 [10, 15, 50]。'},
+{key:55,t:n(15,false,n(10),n(50,false,null,n(55,true))),head:'叔红：分裂满结点',text:'父 50 与叔 10 都红：两者变黑，15 向上推；它是根，最后仍染黑。55 保持红色。',multi:'收缩：根 [15]；孩子 [10]、[50, 55]。'},
+{key:35,t:n(15,false,n(10),n(50,false,n(35,true),n(55,true))),head:'父黑，也可能是 3 → 4',text:'35 加到黑色 50 的左侧；右侧已有红色 55，直接形成一个三键大结点，不产生双红。',multi:'收缩：根 [15]；右孩子 [35, 50, 55]。'},
+{key:40,t:n(15,false,n(10),n(50,true,n(35,false,null,n(40,true)),n(55))),head:'再分裂：50 向上推',text:'父 35 与叔 55 都红：35、55 变黑，50 变红，加入根层；40 仍是 35 的红色右孩子。',multi:'收缩：根 [15, 50]；孩子 [10]、[35, 40]、[55]。'},
+{key:25,t:n(15,false,n(10),n(50,true,n(35,false,n(25,true),n(40,true)),n(55))),head:'父黑：叶大结点装满',text:'25 加到 35 的左侧，与 35、40 组成一个 4-结点，此时仍是合法编码。',multi:'收缩：根 [15, 50]；中间孩子 [25, 35, 40]。'},
+{key:30,t:n(35,false,n(15,true,n(10),n(25,false,null,n(30,true))),n(50,true,n(40),n(55))),head:'先分裂，再修复向上的 RL',text:'先把 35 上推；35 与父 50 都红、叔 10 黑。对 50 右旋、对 15 左旋并换色，35 成黑根。',multi:'收缩：根 [15, 35, 50]；孩子 [10]、[25, 30]、[40]、[55]。'}
+];
+function renderTrace(index){const s=states[index],all=[];function scan(t){if(!t)return;scan(t.l);all.push(t);scan(t.rt);}scan(s.t);const points=new Map();function position(t,depth){if(!t)return;points.set(t,{x:35+all.indexOf(t)*390/Math.max(1,all.length-1),y:38+depth*70});position(t.l,depth+1);position(t.rt,depth+1);}position(s.t,0);if(all.length===1)points.set(s.t,{x:230,y:60});let edges='',nodes='';for(const t of all){const p=points.get(t);for(const child of [t.l,t.rt])if(child){const q=points.get(child);edges+=line(p.x,p.y,q.x,q.y,child.r);}nodes+=circle(p.x,p.y,t.k,t.r);}document.getElementById('trace-svg').innerHTML=svgWrap(edges+nodes,'插入 '+s.key+' 后的红黑树',280);document.getElementById('trace-step').textContent='STEP '+(index+1)+' / 8 · INSERT '+s.key;document.getElementById('trace-heading').textContent=s.head;document.getElementById('trace-explanation').textContent=s.text;document.getElementById('trace-multi').textContent=s.multi;document.querySelectorAll('#trace-controls button').forEach((b,i)=>b.setAttribute('aria-pressed',String(i===index)));}
+const controls=document.getElementById('trace-controls');states.forEach((s,i)=>{const b=document.createElement('button');b.type='button';b.textContent=s.key;b.setAttribute('aria-label','第 '+(i+1)+' 步，插入 '+s.key);b.setAttribute('aria-pressed',String(i===7));b.addEventListener('click',()=>renderTrace(i));controls.appendChild(b);});document.querySelectorAll('#mapping-controls button').forEach(b=>b.addEventListener('click',()=>renderMap(b.dataset.kind)));renderMap('four');renderTrace(7);
+</script>
+</body>
+</html>

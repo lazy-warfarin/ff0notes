@@ -1,0 +1,35 @@
+/* ============================================================
+   填空自测样式（悬停显形）
+   用法：在笔记的 frontmatter 里加一行
+         cssclasses: [fill-blank]
+   效果：该笔记里所有 ==高亮== 的内容默认变成一条空下划线，
+         鼠标移上去才显示文字；光标所在行也会自动显示，方便编辑。
+   只影响挂了 fill-blank 的笔记，其他笔记的高亮不受影响。
+   ============================================================ */
+
+/* 默认状态：文字透明，只剩一条下划线，像一个待填的空 */
+.fill-blank mark,
+.fill-blank .cm-highlight {
+  color: transparent !important;
+  background-color: transparent !important;
+  border-bottom: 1px solid var(--text-faint);
+  border-radius: 0;
+  padding: 0 2px;
+  cursor: help;
+  transition: color 100ms ease, background-color 100ms ease;
+}
+
+/* 编辑时，光标所在行的高亮直接显示，避免看不见自己打的字 */
+.fill-blank .cm-line.cm-active .cm-highlight {
+  color: var(--text-normal) !important;
+  background-color: var(--text-highlight-bg) !important;
+  border-bottom-color: transparent;
+}
+
+/* 鼠标悬停：显示答案，并恢复成普通高亮 */
+.fill-blank mark:hover,
+.fill-blank .cm-highlight:hover {
+  color: var(--text-normal) !important;
+  background-color: var(--text-highlight-bg) !important;
+  border-bottom-color: transparent;
+}

@@ -2,5 +2,6 @@
   "cssTheme": "Minimal",
   "enabledCssSnippets": [
     "fill-blank"
-  ]
+  ],
+  "nativeMenus": false
 }

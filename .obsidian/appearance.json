@@ -3,5 +3,6 @@
   "enabledCssSnippets": [
     "fill-blank"
   ],
-  "nativeMenus": false
+  "nativeMenus": false,
+  "showRibbon": true
 }
